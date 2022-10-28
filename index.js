@@ -1,15 +1,15 @@
 const express = require('express');
 const app = express();
 const port = 8000;
+const db = require('./config/mongoose');
 
+const path = require('path');
 app.set('view engine', 'ejs');
 app.set('views', './views');
 
-app.use(express.static('public'));
-
-app.get('/', (req, res)=>{
-    res.render('home');
-})
+app.use(express.static('./assets'));
+app.use(express.urlencoded());
+app.use('/', require('./routes'));
 
 app.listen(port, function(err){
     if(err){
@@ -18,3 +18,4 @@ app.listen(port, function(err){
         console.log('Server is running on port : '+port);
     }
 })
+

@@ -4,12 +4,14 @@
   "description": "A ToDo app developed using HTML, CSS, JS and NodeJS and MongoDB database",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
   },
   "author": "Sourav Malviya",
   "license": "ISC",
   "dependencies": {
     "ejs": "^3.1.8",
-    "express": "^4.18.1"
+    "express": "^4.18.1",
+    "mongoose": "^6.6.1"
   }
 }
